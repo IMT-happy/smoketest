@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>冒烟测试页</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<style>
+		body {
+			font-family: "Microsoft Yahei";
+			width: 500px;
+			min-height: 100px;
+		}
+
+		* {
+			background-color: white;
+		}
+
+		button {
+			display: inline-block;
+			font-weight: normal;
+			border-radius: 4px;
+			cursor: pointer;
+			transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+			border: none;
+			background-color: white;
+			width: 100%;
+			height: 100%;
+		}
+
+		.firstdd {
+			width: max-content;
+			height: 22px;
+			line-height: 22px;
+			border-radius: 4px;
+			border: 1px solid rgb(35, 173, 229);
+			box-sizing: border-box;
+			font-size: 12px;
+			background-color: white;
+			color: rgb(35, 173, 229);
+			margin-right: 8px;
+		}
+
+		button:hover {
+			background-color: rgb(35, 173, 229);
+			color: white;
+		}
+
+		.heihei {
+			display: flex;
+			justify-content: center;
+		}
+	</style>
+</head>
+
+<body>
+	<h1 style="
+        font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue,
+          Helvetica, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei,
+          sans-serif;
+        text-align: center;
+      ">
+		冒烟测试
+	</h1>
+	<div>
+		<div class="heihei">
+			<div class="firstdd">
+				<button id="dosearchconnect">持续监测</button>
+			</div>
+			<div id="getreport" class="firstdd" style="display: none">
+				<button id="doelementsearch">查看报告</button>
+			</div>
+		</div>
+		<div id="showgif" style="text-align: center; display: none">
+			<img style="width: 150px; margin-top: 10px; border-radius: 5px" src="/img/loading2.gif" alt="" />
+			<div>正在执行冒烟自动化测试...</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+	<script type="text/javascript" src="js/popup.js"></script>
+</body>
+
+</html>

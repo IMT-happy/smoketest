@@ -1,0 +1,51 @@
+{
+  "manifest_version": 2,
+  "name": "smoketest",
+  "version": "1.0.0",
+  "description": "give your page a smoketest",
+  "icons": {
+    "16": "img/jingling.png",
+    "48": "img/jingling.png",
+    "128": "img/jingling.png"
+  },
+  "background": {
+    "page": "background.html"
+  },
+  "browser_action": {
+    "default_icon": "img/jingling.png",
+    "default_title": "冒烟测试",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "matches": ["<all_urls>"],
+      "js": ["js/jquery-1.8.3.js", "js/content-script.js"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["*://*/*.png", "*://*/*.jpg", "*://*/*.gif", "*://*/*.bmp"],
+      "js": ["js/show-image-content-size.js"]
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "notifications",
+    "webRequest",
+    "webRequestBlocking",
+    "storage",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "web_accessible_resources": ["js/inject.js"],
+  "homepage_url": "https://www.bilibili.com",
+  "chrome_url_overrides": {},
+  "options_page": "options.html",
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
+  "omnibox": { "keyword": "go" },
+  "default_locale": "zh_CN",
+  "devtools_page": "devtools.html"
+}
