@@ -38,7 +38,7 @@
     "https://*/*"
   ],
   "web_accessible_resources": ["js/inject.js"],
-  "homepage_url": "https://www.bilibili.com",
+  "homepage_url": "https://www.imt.com",
   "chrome_url_overrides": {},
   "options_page": "options.html",
   "options_ui": {

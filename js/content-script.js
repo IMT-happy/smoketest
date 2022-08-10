@@ -206,7 +206,7 @@ chrome.runtime.onConnect.addListener(function (port) {
               xhr.addEventListener("readystatechange", function () {
                 if (this.readyState === 4) {
                   alert(
-                    "数据已发送，查看日志报告： http://qa-mng.bilibili.co/#/Smoke"
+                    "数据已发送，查看日志报告： http://qa-mng.imt.co/#/Smoke"
                   );
                   console.log(this.responseText);
                 }
@@ -256,8 +256,7 @@ function getAllNodes(d) {
 
 function getAllplayerNodes(d) {
   //判断下参数
-  d === "*" &&
-    (d = document.getElementsByClassName("bilibili-player-video-wrap"));
+  d === "*" && (d = document.getElementsByClassName("imt-player-video-wrap"));
   //用arguments[1] 初始化一个空数组
   !arguments[1] && (arguments[1] = []);
   for (var i = 0, l = d.length; i < l; i++) {
